@@ -14,11 +14,14 @@ public class BaseTests {
     @BeforeClass
     public void setUp(){
         driver = new ChromeDriver();
-        driver.get("https://the-internet.herokuapp.com/");
+        goToHomePage();
         driver.manage().window().maximize();
         homePage = new HomePage(driver);
     }
-
+    @BeforeMethod
+    public void goToHomePage(){
+        driver.get("https://the-internet.herokuapp.com/");
+    }
     @AfterClass
     public void tearDown(){
         driver.quit();

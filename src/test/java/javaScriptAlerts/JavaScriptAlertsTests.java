@@ -6,7 +6,6 @@ import pages.JavaScriptAlerts;
 import static org.testng.Assert.*;
 
 public class JavaScriptAlertsTests extends BaseTests {
-
     @Test
     public void testAlert(){
         JavaScriptAlerts javaScriptAlerts = homePage.clickjavaScriptAlerts();
@@ -21,5 +20,15 @@ public class JavaScriptAlertsTests extends BaseTests {
         javaScriptAlerts.clickConfirmButton();
         assertEquals(javaScriptAlerts.confirmAlertText(),"I am a JS Confirm","Error confirm text");
         javaScriptAlerts.dismissAlert();
+    }
+
+    @Test
+    public void testPrompt(){
+        JavaScriptAlerts javaScriptAlerts = homePage.clickjavaScriptAlerts();
+        javaScriptAlerts.clickPrompt();
+        String text = "Hello World";
+        javaScriptAlerts.fillPrompt(text);
+        javaScriptAlerts.acceptAlert();
+        assertEquals(javaScriptAlerts.alertResultText(),"You entered: "+text,"not equal msgs");
     }
 }
