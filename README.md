@@ -21,7 +21,7 @@ This project aims to demonstrate test automation for The Internet, a sample webs
 ## Getting Started
 ### Installation
 1. Clone this repository to your local machine:
-2. git clone https://github.com/your-username/test-automation-the-internet.git
+2. git clone https://github.com/mohamedelshwimy/TAU_TheInternetWebsite.git
 3. Open the project in your preferred Java IDE (e.g., Eclipse).
 4. Install the required dependencies (Selenium WebDriver, TestNG) using Maven. You can do this by right-clicking on the project and selecting "Maven" -> "Update Project."
 5. Download the appropriate WebDriver (ChromeDriver or GeckoDriver) for your browser and ensure it is in your system's PATH.
