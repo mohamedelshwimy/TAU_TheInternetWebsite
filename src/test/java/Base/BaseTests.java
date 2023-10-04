@@ -1,5 +1,6 @@
 package Base;
 
+import Utils.WindowManager;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.annotations.*;
@@ -24,7 +25,9 @@ public class BaseTests {
     }
     @AfterClass
     public void tearDown(){
-        //driver.quit();
+        driver.quit();
     }
-
+    public WindowManager getWindowManager(){
+        return new WindowManager(driver);
+    }
 }

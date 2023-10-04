@@ -36,4 +36,7 @@ public class DynamicLoadingEx1 {
         return driver.findElement(loadedText).getText();
     }
 
+    public boolean isStartButtonDisplayed() {
+        return driver.findElement(startButton).isDisplayed();
+    }
 }
