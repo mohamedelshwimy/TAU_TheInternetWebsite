@@ -51,4 +51,24 @@ public class HomePage {
         clickLink("Context Menu");
         return new ContextMenuPage(driver);
     }
+    public IframePage clickIframe(){
+        clickLink("WYSIWYG Editor");
+        return new IframePage(driver);
+    }
+    public FramesPage clickFrame(){
+        clickLink("Frames");
+        return new FramesPage(driver);
+    }
+    public DynamicLoadingPage clickDynamicLoading(){
+        clickLink("Dynamic Loading");
+        return new DynamicLoadingPage(driver);
+    }
+    public LargeDOMPage clickLargeDOM(){
+        clickLink("Large & Deep DOM");
+        return new LargeDOMPage(driver);
+    }
+    public InfiniteScrollPage clickInfiniteScroll(){
+        clickLink("Infinite Scroll");
+        return new InfiniteScrollPage(driver);
+    }
 }
